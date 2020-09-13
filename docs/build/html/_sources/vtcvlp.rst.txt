@@ -1,0 +1,38 @@
+vtcvlp package
+==============
+
+Submodules
+----------
+
+vtcvlp.settings module
+----------------------
+
+.. automodule:: vtcvlp.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+vtcvlp.urls module
+------------------
+
+.. automodule:: vtcvlp.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+vtcvlp.wsgi module
+------------------
+
+.. automodule:: vtcvlp.wsgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: vtcvlp
+   :members:
+   :undoc-members:
+   :show-inheritance:
