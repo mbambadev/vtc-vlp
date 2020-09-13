@@ -7,13 +7,15 @@ from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import *
-from rest_framework import viewsets, generics
+from rest_framework import generics, mixins
 
 from notifications.signals import notify
 
+from .permissions import IsOwnerOrReadOnly
 from .models import VideoLink
 from .forms import VideoLinkModelForm
+from .serializers import VideoLinkSerializer
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 # Show all videos link
@@ -183,6 +185,30 @@ class VideoLinkApiView(APIView):
         return Response({"Message": "New Link Added!", "VideoLink": vl})
 
 
+class VideoLinkAPIView(mixins.CreateModelMixin, generics.ListAPIView):
+    """
+        VideoLinkPostRudView class
+        :param class: `generics.RetrieveUpdateDestroyAPIView`
+        :type class: `generics.RetrieveUpdateDestroyAPIView`
+    """
+    lookup_field = 'pk'
+    serializer_class = VideoLinkSerializer
+    authentication_classes = [JSONWebTokenAuthentication]
+
+    def get_queryset(self):
+        qs = VideoLink.objects.all()
+        query = self.request.GET.get("q")
+        if query is not None:
+            qs = qs.filter(name__icontains=query).distinct()
+        return qs
+
+    def perform_create(self, serializer):
+        serializer.save(poster=self.request.user.member)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+
 class VideoLinkPostRudView(generics.RetrieveUpdateDestroyAPIView):
     """
         VideoLinkPostRudView class
@@ -190,6 +216,9 @@ class VideoLinkPostRudView(generics.RetrieveUpdateDestroyAPIView):
         :type class: `generics.RetrieveUpdateDestroyAPIView`
     """
     lookup_field = 'pk'
+    serializer_class = VideoLinkSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+    authentication_classes = [JSONWebTokenAuthentication]
 
     def get_queryset(self):
         return VideoLink.objects.all()

@@ -8,14 +8,12 @@ from django.contrib import admin
 from django.urls import re_path
 from django.conf.urls.static import static
 from allauth.account import views as a_views
-from vtcuser import views
 
 admin.autodiscover()
 
 urlpatterns = [
     # VTC Apps urls
     re_path(r'', include('vtcuser.urls')),
-    re_path(r'^vl/api/prud/(?P<pk>d\+)/$',views.VideoLinkPostRudView.as_view(), name='vl-rud'),
 
     # Allauth
     re_path('account/', include('allauth.urls')),

@@ -6,13 +6,17 @@
 Welcome to vtc-video-link-post's documentation!
 ===============================================
 
+This document describes how to launch the VTC-VLP application step by step on a local web server.
+
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Table of content:
    :numbered:
    :titlesonly:
    :glob:
-   :hidden:
+   :includehidden:
 
    intro
    usage

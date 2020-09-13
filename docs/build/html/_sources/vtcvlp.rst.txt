@@ -4,9 +4,14 @@ Documentation
 
 The ``CustomUser`` class
 *****************************
-.. py:class:: vtcuser.models.CustomUser
+.. autoclass:: vtcuser.models.CustomUser
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 The ``VideoLink`` class
 *****************************
-.. py:class:: vtcuser.models.VideoLink
-    :methods:
+.. autoclass:: vtcuser.models.VideoLink
+    :members:
+    :undoc-members:
+    :show-inheritance:

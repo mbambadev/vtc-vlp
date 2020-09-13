@@ -19,7 +19,10 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../../vtcvlp/'))
+import django
+sys.path.insert(0, os.path.abspath('../../'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'vtcvlp.settings'
+django.setup()
 
 project = 'vtc-video-link-post'
 copyright = '2020, MBAMBA FABRICE DAMIEN'
@@ -34,8 +37,7 @@ release = '1.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = ['recommonmark', 'sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

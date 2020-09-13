@@ -81,7 +81,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">Table of content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Report of task project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">2. Get Started</a></li>
@@ -157,12 +157,176 @@
 <h2><span class="section-number">3.1. </span>The <code class="docutils literal notranslate"><span class="pre">CustomUser</span></code> class<a class="headerlink" href="#the-customuser-class" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="vtcuser.models.CustomUser">
-<em class="property">class </em><code class="sig-prename descclassname">vtcuser.models.</code><code class="sig-name descname">CustomUser</code><a class="headerlink" href="#vtcuser.models.CustomUser" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">vtcuser.models.</code><code class="sig-name descname">CustomUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/vtcuser/models.html#CustomUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vtcuser.models.CustomUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Custom User class
+:param models.Model: models.Model class;
+:type user: User;</p>
+<dl class="py exception">
+<dt id="vtcuser.models.CustomUser.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#vtcuser.models.CustomUser.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="vtcuser.models.CustomUser.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#vtcuser.models.CustomUser.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="vtcuser.models.CustomUser.create_user_profile">
+<code class="sig-name descname">create_user_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance</span></em>, <em class="sig-param"><span class="n">created</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/vtcuser/models.html#CustomUser.create_user_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vtcuser.models.CustomUser.create_user_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callable function for create user profile when create account
+:param kwargs: Any other param
+:type kwargs: dict
+:param sender: User object
+:type sender: User Object
+:param instance: CustomUser
+:type instance: CustomUser object
+:param created: Return True if creation else return False
+:type created: bool: True or False
+:return None
+:rtype None object</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.CustomUser.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#vtcuser.models.CustomUser.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.CustomUser.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#vtcuser.models.CustomUser.objects" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.CustomUser.user">
+<code class="sig-name descname">user</code><a class="headerlink" href="#vtcuser.models.CustomUser.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Restaurant.place</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.CustomUser.user_id">
+<code class="sig-name descname">user_id</code><a class="headerlink" href="#vtcuser.models.CustomUser.user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.CustomUser.videolink_set">
+<code class="sig-name descname">videolink_set</code><a class="headerlink" href="#vtcuser.models.CustomUser.videolink_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 <div class="section" id="the-videolink-class">
 <h2><span class="section-number">3.2. </span>The <code class="docutils literal notranslate"><span class="pre">VideoLink</span></code> class<a class="headerlink" href="#the-videolink-class" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="vtcuser.models.VideoLink">
+<em class="property">class </em><code class="sig-prename descclassname">vtcuser.models.</code><code class="sig-name descname">VideoLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/vtcuser/models.html#VideoLink"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vtcuser.models.VideoLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>VideoLink object
+:param models.Model: models.Model class
+:type: name: str, required
+:type link: Url object, required
+:type date_add: DateTime object, default;</p>
+<dl class="py exception">
+<dt id="vtcuser.models.VideoLink.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#vtcuser.models.VideoLink.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="vtcuser.models.VideoLink.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#vtcuser.models.VideoLink.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.date_add">
+<code class="sig-name descname">date_add</code><a class="headerlink" href="#vtcuser.models.VideoLink.date_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="vtcuser.models.VideoLink.get_next_by_date_add">
+<code class="sig-name descname">get_next_by_date_add</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateTimeField: date_add&gt;</em>, <em class="sig-param">is_next=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtcuser.models.VideoLink.get_next_by_date_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="vtcuser.models.VideoLink.get_previous_by_date_add">
+<code class="sig-name descname">get_previous_by_date_add</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateTimeField: date_add&gt;</em>, <em class="sig-param">is_next=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtcuser.models.VideoLink.get_previous_by_date_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#vtcuser.models.VideoLink.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.link">
+<code class="sig-name descname">link</code><a class="headerlink" href="#vtcuser.models.VideoLink.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#vtcuser.models.VideoLink.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#vtcuser.models.VideoLink.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.poster">
+<code class="sig-name descname">poster</code><a class="headerlink" href="#vtcuser.models.VideoLink.poster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="vtcuser.models.VideoLink.poster_id">
+<code class="sig-name descname">poster_id</code><a class="headerlink" href="#vtcuser.models.VideoLink.poster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

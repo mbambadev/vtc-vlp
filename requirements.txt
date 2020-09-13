@@ -25,3 +25,4 @@ swapper==1.1.2.post1
 urllib3==1.25.10
 whitenoise==5.2.0
 djangorestframework~=3.11.0
+djangorestframework-jwt~=1.11.0

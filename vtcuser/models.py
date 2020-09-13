@@ -6,6 +6,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import models
 
+from rest_framework.reverse import reverse as api_reverse
+
 
 @python_2_unicode_compatible
 class CustomUser(models.Model):
@@ -69,6 +71,13 @@ class VideoLink(models.Model):
             :return name: str
         """
         return self.name
+
+    @property
+    def owner(self):
+        return self.poster.user
+
+    def get_api_url(self, request=None):
+        return api_reverse("vtcuser:vl-rud", kwargs={'pk': self.pk}, request=request)
 
     class Meta:
         """
