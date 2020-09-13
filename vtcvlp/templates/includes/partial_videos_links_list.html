@@ -1,0 +1,27 @@
+{% load  i18n staticfiles %}
+
+{% for vl in videos_links %}
+    <tr>
+        <td class="center">
+            {{ vl.pk }}
+        </td>
+        <td class="center">
+            {{ vl.date_add }}
+        </td>
+        <td class="center">
+            {{ vl.name }}
+        </td>
+        <td class="center">
+            {{ vl.link }}
+        </td>
+        <td class="center">
+            <button data-url="{% url "vtcuser:video_edit" vl.pk %}" class="btn btn-primary waves-effect edit-vl-btn">
+                <i class="material-icons">system_update_alt</i>
+            </button>
+
+            <button data-url="{% url "vtcuser:video_delete" vl.pk %}" class="btn bg-red delete-vl-btn">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </td>
+    </tr>
+{% endfor %}

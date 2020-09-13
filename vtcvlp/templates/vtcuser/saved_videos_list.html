@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+{% load  i18n staticfiles notifications_tags %}
+{% register_notify_callbacks callbacks='fill_notification_list,fill_notification_badge' fetch=20 refresh_period=5 %}
+
+
+<!-- Menu !-->
+{% block dashboard_menu %}{% endblock %}
+{% block other_manager_menu %}class="active"{% endblock %}
+{% block customer_manager_submenu %}class="active"{% endblock %}
+
+<!-- Breadcrumb -->
+{% block breadcrumb %}
+    <li class="breadcrumb-item">
+        <h4 class="page-title">{% trans "Videos links post" %}</h4>
+    </li>
+    <li class="breadcrumb-item bcrumb-1">
+        <a href="/"><i class="fas fa-home"></i> {% trans "Home" %}</a>
+    </li>
+    <li class="breadcrumb-item active">{% trans "Videos links list" %}</li>
+{% endblock breadcrumb %}
+
+<!-- content dropdown -->
+{% block content_dropdown %}
+    <ul class="header-dropdown m-r--5">
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons">more_vert</i>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <a data-url="{% url "vtcuser:video_add" %}" class="add-vl">{% trans "Add new" %}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block new_notification_sign %}
+    {% if unread_count %}
+    <span class="label-count bg-red"></span>
+    {% endif %}
+{% endblock %}
+{% block notifications_list %}
+    {% live_notify_list %}
+{% endblock notifications_list %}
+
+<!-- content header -->
+{% block content_header %}
+    <!-- content title -->
+    <h2><strong>{{ head_title }}</strong> </h2>
+    <!-- End content title -->
+{% endblock content_header %}
+
+<!-- content body -->
+{% block content_body %}
+    <div class="table-responsive">
+        {% if videos_links.count %}
+            <table id="vl-table" class="table table-hover js-datablize vl-list-content">
+                <thead>
+                    <tr>
+                        <th class="center">{% trans "ID" %}</th>
+                        <th class="center">{% trans "Added at" %}</th>
+                        <th class="center">{% trans "Name" %}</th>
+                        <th class="center">{% trans "Url" %}</th>
+                        <th class="center">{% trans "Manager" %}</th>
+                    </tr>
+                </thead>
+                <tbody class="vl-data">
+                    {% include "includes/partial_videos_links_list.html" %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-info">
+                {% blocktrans %}
+                    <strong>Oups ! </strong> You haven't posted any video links yet.
+                {% endblocktrans %}
+            </div>
+        {% endif %}
+    </div>
+    <!-- Modal Structure -->
+    <div id="windows-modal" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+{% endblock content_body %}
+
+<!-- We include another JS -->
+{% block others_js %}
+    <script type="text/javascript" src="{% static 'js/bundles/table.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/dataTables.buttons.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/buttons.flash.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/jszip.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/pdfmake.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/vfs_fonts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/buttons.html5.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/buttons.print.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/pages/forms/support.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bundles/js-datablize.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vtcuser/js/vl.js' %}"></script>
+    {% include 'includes/messages.html' %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% load toastmessage %}
+
+{% if messages %}
+    {% for message in messages %}
+        {% toast_message message %}
+    {% endfor %}
+{% endif %}

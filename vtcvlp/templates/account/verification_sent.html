@@ -1,0 +1,48 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>{% trans "Confirm your account" %}</title>
+<!-- Favicon-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="{% static "plugins/bootstrap/css/bootstrap.min.css" %}">
+<!-- Custom Css -->
+<link rel="stylesheet" href="{% static "css/main.css" %}">
+<link rel="stylesheet" href="{% static "css/authentication.css" %}">
+<link rel="stylesheet" href="{% static "css/all-themes.css" %}" />
+</head>
+
+<body class="theme-red">
+<div class="authentication">
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-lg-8 col-md-12 col-sm-12">
+				<div class="l-detail">
+                    <h5>Welcome back !</h5>
+                    <h1>VTC <span>video link poster</span></h1>
+                    <h3>You must login sorry ...</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                </div>
+			</div>
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="card">
+				    <h4 class="l-login">{% trans "Confirm your account creation" %}</h4>
+                    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+				    <a href="{% url "account_login" %}" class="btn btn-raised waves-effect bg-red">{% trans "Login now" %}</a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="{% static "bundles/libscripts.bundle.js" %}"></script> <!-- Lib Scripts Plugin Js -->
+<script src="{% static "bundles/vendorscripts.bundle.js" %}"></script> <!-- Lib Scripts Plugin Js -->
+
+<script src="{% static "bundles/mainscripts.bundle.js" %}"></script><!-- Custom Js -->
+</body>
+</html>

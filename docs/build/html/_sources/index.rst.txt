@@ -9,12 +9,17 @@ Welcome to vtc-video-link-post's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :numbered:
+   :titlesonly:
+   :glob:
+   :hidden:
 
-
+   intro
+   usage
+   vtcvlp
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

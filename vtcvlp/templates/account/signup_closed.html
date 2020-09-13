@@ -1,0 +1,41 @@
+{% extends "frontend/base.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Inscription suspendue" %} - {% endblock %}
+{% block keywords %}{% blocktrans %}Inscription{% endblocktrans %}{% endblock keywords %}
+{% block description %}{% blocktrans %}Inscription suspendue{% endblocktrans %}{% endblock description %}
+
+{% block banner %}
+    <div id="page-banner-area" class="page-banner-area blog-banner">
+        <!-- Subpage title start -->
+        <div class="page-banner-title">
+            <div class="text-center">
+                <h2>{% trans "Inscription suspendue" %}</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{% url "frontend:home" %}">Accueil /</a>
+                    </li>
+                    <li>
+                        {% trans "Inscription" %}
+                    </li>
+                </ol>
+            </div>
+        </div><!-- Subpage title end -->
+    </div><!-- Page Banner end -->
+{% endblock banner %}
+
+{% block sub_content %}
+    <section class="main-container pb-0" id="main-container">
+         <div class="container">
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+                        <div class="sign-alert">
+                            <div class="alert alert-primary" role="alert">
+                                <h4 class="alert-heading entry-title text-center">{% trans 'Inscription suspendue' %}</h4>
+                                <p class="help-text text-center">{% blocktrans %}Nous sommes désolés, mais les inscriptions sont actuellement suspendues.{% endblocktrans %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+    </section>
+{% endblock sub_content %}

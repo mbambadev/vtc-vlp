@@ -1,0 +1,144 @@
+{% extends "index.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+    <!-- Sign page style -->
+<link rel="stylesheet" href="{% static "frontend/css/sign.css" %}">
+{% endblock extrastyle %}
+
+{% block banner %}
+    <!-- Banner begin -->
+    <section class="hero-area hero-speakers sign-section">
+        <div class="banner-item" style="background-image:url({% static "frontend/images/hero_area/banner2.jpg" %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="banner-content-wrap">
+                            <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms" style="visibility: visible; animation-duration: 1.5s; animation-delay: 700ms; animation-name: fadeInUp;">Découvrez, apprennez, proposez, ... avec fluttercm</h1>
+                            <div class="sub-heading">
+                                <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1.5s; animation-delay: 500ms; animation-name: fadeInUp;">
+                                    {% blocktrans %}Fluttercm est la communauté officielle flutter au Cameroun, elle accueille tous les developpeurs mobiles interressés par Flutter, le nouveau framework de Google permettant de créer des applications mobiles multiplateformes natives. Que vous veniez de commencer un nouveau projet Flutter ou que vous soyez un développeur expérimenté qui cherche à discuter de sujets avancés, vous avez tout à fait votre place!{% endblocktrans %}</p>
+
+                                <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms" style="visibility: visible; animation-duration: 1.5s; animation-delay: 800ms; animation-name: fadeInUp;">
+                                    {% block sign_recommandation %}
+
+                                    {% endblock sign_recommandation %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-1">
+                        <div class="hero-form-content">
+                            {% block sign_form %}
+                                <form action="#" class="hero-form">
+                                    <h2 class="mb-4 mt-0 text-center">{% trans "Creez votre compte" %}</h2>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control pb_height-50 reverse"
+                                               placeholder="Full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control pb_height-50 reverse"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control pb_height-50 reverse"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pb_select-wrap">
+                                            <select class="form-control pb_height-50 reverse">
+                                                <option value="" selected="">Type</option>
+                                                <option value="">Basic</option>
+                                                <option value="">Business</option>
+                                                <option value="">Free</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    {% block socialaccount_providers %}
+                                        <div class="social text-center">
+                                            <h4 class="mt-3"> or be classical </h4>
+                                            <button class="btn btn-just-icon btn-round btn-google">
+                                                <i class="fab fa-google"></i>
+                                            </button>
+                                            <button class="btn btn-just-icon btn-round btn-github">
+                                                <i class="fab fa-github"></i>
+                                            </button>
+                                            <button class="btn btn-just-icon btn-round btn-slack">
+                                                <i class="fab fa-slack"></i>
+                                            </button>
+                                            <button class="btn btn-just-icon btn-round btn-discord">
+                                                <i class="fab fa-discord"></i>
+                                            </button>
+                                            <button class="btn btn-just-icon btn-round btn-facebook">
+                                                <i class="fab fa-facebook"> </i>
+                                            </button>
+                                        </div>
+                                    {% endblock socialaccount_providers %}
+
+                                    <div class="form-group">
+                                        <input type="submit"
+                                               class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
+                                               value="Register">
+                                    </div>
+                                </form>
+                            {% endblock sign_form %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container end -->
+        </div>
+    </section>
+    <!-- banner end-->
+{% endblock banner %}
+
+{% block sub_content %}
+    <!-- ts intro start -->
+    {% block event_outcome %}
+        <section class="ts-event-outcome event-intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="">
+                            <div class="outcome-content ts-exp-content">
+                                <h2 class="column-title">
+                                    <span>Evènements futurs</span>
+                                    Learn new things and
+                                    connect people
+                                </h2>
+                                <p>
+                                    How you transform your business technology consumer, habits industry dynamic
+                                    change
+                                    the Find
+                                    out from those leading
+                                </p>
+                                <a href="#" class="btn">Leanr More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="outcome-content">
+                            <div class="outcome-img overlay">
+                                <img class="" src="{% static "frontend/images/about/learn_img.jpg" %}" alt="">
+                            </div>
+                            <h3 class="img-title text-white"><a href="#" class="text-white">Learn Things</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="outcome-content">
+                            <div class="outcome-img overlay">
+                                <img class="" src="{% static "frontend/images/about/connect_img.jpg" %}" alt="">
+                            </div>
+                            <h3 class="img-title"><a href="#" class="text-white">connect People</a></h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    {% endblock event_outcome %}
+    <!-- ts intro end-->
+{% endblock sub_content %}
+
+

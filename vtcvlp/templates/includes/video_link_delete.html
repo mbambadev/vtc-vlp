@@ -1,0 +1,25 @@
+{% load i18n staticfiles forms_tags widget_tweaks %}
+
+<form method="post" action="{{ url }}" class="js-vl-delete-form" autocomplete="off">
+    {% csrf_token %}
+    <!--Modal header-->
+    <div class="modal-header">
+        <!--Modal header-->
+        <h5 class="modal-title">
+            {% trans "Delete video link" %}
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!--Modal body-->
+    <div class="modal-body">
+        <p class="lead">Are you sur to delete your video link name: <strong>{{ instance.name }}</strong> ?</p>
+        <p>Keep in mind that it's reversible action</p>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-danger waves-effect">{% trans "Yes ! Delete it" %}</button>
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">{% trans "Cancel" %}</button>
+    </div>
+</form>

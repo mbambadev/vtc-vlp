@@ -1,0 +1,42 @@
+{% extends "frontend/base.html" %}
+{% load i18n static %}
+{% block title %}{% trans "Confirmation inscription" %} - {% endblock %}
+{% block keywords %}{% blocktrans %}Confirmation{% endblocktrans %}{% endblock keywords %}
+{% block description %}{% blocktrans %}Confirmation de votre inscription{% endblocktrans %}{% endblock description %}
+
+{% block banner %}
+    <div id="page-banner-area" class="page-banner-area blog-banner">
+        <!-- Subpage title start -->
+        <div class="page-banner-title">
+            <div class="text-center">
+                <h2>{% trans "Validez votre inscription" %}</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{% url "frontend:home" %}">Accueil /</a>
+                    </li>
+                    <li>
+                        {% trans "Confirmation inscription" %}
+                    </li>
+                </ol>
+            </div>
+        </div><!-- Subpage title end -->
+    </div><!-- Page Banner end -->
+{% endblock banner %}
+
+{% block sub_content %}
+    <section class="main-container pb-0" id="main-container">
+         <div class="container">
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+                        <div class="sign-alert">
+                            <div class="alert alert-primary" role="alert">
+                                <h4 class="alert-heading entry-title text-center">{% trans 'Veuillez confirmer votre inscription' %}</h4>
+                                <p class="help-text text-center">{% blocktrans %}Cette partie du site nous oblige à vérifier que vous êtes ce que vous prétendez être. Pour ce faire, nous exigeons que vous vérifiez la propriété de votre adresse e-mai fournie à l'inscription.{% endblocktrans %}</p>
+                                <p class="help-text text-center">{% blocktrans %}Nous vous avons envoyé un nouvel e-mail pour vérification. S'il vous plaît cliquer sur le lien dans cet e-mail. S'il vous plaît contactez-nous si vous ne le recevez pas dans quelques minutes.{% endblocktrans %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+    </section>
+{% endblock sub_content %}

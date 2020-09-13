@@ -1,1 +1,12 @@
-# Created by .ignore support plugin (hsz.mobi)
+# Created by MBAMBA FABRICE DAMIEN
+.env
+.idea/
+db.sqlite3
+media/
+static/
+vtcuser/__pycache__/
+vtcuser/migrations/__pycache__/
+vtcuser/templatetags/__pycache__/
+vtcvlp/__pycache__/
+
+

@@ -1,0 +1,5 @@
+.select-wrapper+label {
+    position: relative !important;
+    font-size: .8rem;
+    top: 0 !important;
+}

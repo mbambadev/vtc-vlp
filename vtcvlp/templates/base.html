@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% include 'includes/meta-class.html' %}
+        <title>{% block head_title %}{{ head_title }}{% endblock %}</title>
+        <!-- All css files are included here ============================================ -->
+        {% block base_css %}
+            {% include "includes/base-css.html" %}
+        {% endblock %}
+
+        {% block others_css %}{% endblock %}
+
+        {% block exception_js %}{% endblock %}
+    </head>
+    {% block main_body %}
+        <body class="{% block body_block_tag %}{% endblock %}">
+        <!-- Start Page Loading -->
+        {% block page_loader %}
+            <!-- Start Page Loading -->
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+            <!-- End Page Loading -->
+        {% endblock page_loader %}
+        <!-- End Page Loading -->
+        <!-- Overlay For Sidebars -->
+        <div class="overlay"></div>
+        <!-- #END# Overlay For Sidebars -->
+
+        <!-- Page content section -->
+        {% block body %}
+        {% endblock body %}
+        <!-- End page content section -->
+
+        <!-- Js blocks -->
+        {% block base_js %}
+            {% include "includes/base-js.html" %}
+        {% endblock base_js %}
+
+        {% block others_js %}{% endblock %}
+        <!-- End js blocks -->
+        </body>
+    {% endblock %}
+</html>

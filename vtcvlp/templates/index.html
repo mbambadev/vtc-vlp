@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% block body %}
+    {% block nav_bar %}
+        <!-- Top Bar -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                    <a href="javascript:void(0);" class="bars"></a>
+                    <a class="navbar-brand" href="{% url "vtcuser:home_video_list" %}">
+                        <span class="logo-name">VTC - vlp</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="pull-left">
+                        <li>
+                            <a href="javascript:void(0);" class="sidemenu-collapse">
+                                <i class="material-icons">reorder</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Full Screen Button -->
+                        <li class="fullscreen">
+                            <a href="#" class="fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </li>
+                        <!-- #END# Full Screen Button -->
+                        <!-- #START# Notifications-->
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="far fa-bell"></i>
+                                {% block new_notification_sign %}
+
+                                {% endblock new_notification_sign %}
+                            </a>
+                            <ul class="dropdown-menu pullDown">
+                                <li class="header">NOTIFICATIONS</li>
+                                <li class="body">
+                                    <ul class="menu">
+                                        {% block notifications_list %}
+
+                                        {% endblock notifications_list %}
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- #END# Notifications-->
+                        <li class="dropdown user_profile">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <img src="{% static "images/inf/anonymous.jpg" %}" width="32" height="32" alt="Anonymous user">
+                            </a>
+                            <ul class="dropdown-menu pullDown">
+                                <li class="body">
+                                    <ul class="user_dw_menu">
+                                        {% if user.is_authenticated %}
+                                            <li>
+                                                <a href="#"><i class="material-icons">help</i>{% trans "Faqs" %}</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>{% trans "Logout" %}</a>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{% url "account_login" %}"><i class="material-icons">exit_to_app</i>{% trans "Login" %}</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "account_signup" %}"><i class="material-icons">assignment_ind</i>{% trans "Register" %}</a>
+                                            </li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- #END# Tasks -->
+                        <li class="pull-right">
+                            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- #Top Bar -->
+        <!-- Side Bar -->
+        <div>
+            <!-- Left Sidebar -->
+            <aside id="leftsidebar" class="sidebar">
+                <!-- Menu -->
+                <div class="menu">
+                    <ul class="list">
+                        {% block user_profile_context %}{% endblock %}
+                        <li {% block dashboard_menu %}class="active"{% endblock %}>
+                            <a href="{% url "vtcuser:home_video_list" %}">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>{% trans "My dashboard" %}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- #Menu -->
+            </aside>
+            <!-- #END# Left Sidebar -->
+            <!-- Right Sidebar -->
+            {% include "includes/right_sidebar.html" %}
+            <!-- #END# Right Sidebar -->
+        </div>
+        <!-- End Side Bar -->
+    {% endblock nav_bar %}
+    <!-- Section -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Breadcrumb -->
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="breadcrumb breadcrumb-style ">
+                            {% block breadcrumb %}
+                                <li class="breadcrumb-item">
+                                    <h4 class="page-title">{% trans "Tableau de bord" %}</h4>
+                                </li>
+                                <li class="breadcrumb-item bcrumb-1">
+                                    <a href="/"><i class="fas fa-home"></i> {% trans "Home" %}</a>
+                                </li>
+                                <li class="breadcrumb-item active">{% trans "Tableau de bord" %}</li>
+                            {% endblock breadcrumb %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End breadcrumb -->
+            {% block base_content %}
+                <!-- content -->
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card">
+                            <!-- Content header -->
+                            <div class="header">
+                                {% block content_header %}
+                                <!-- content title -->
+
+                                <!-- End content title -->
+                                {% endblock content_header %}
+
+                                {% block content_dropdown %}
+                                <!-- dropdown of content page -->
+
+                                <!-- end dropdown of content page -->
+                                {% endblock content_dropdown %}
+                            </div>
+                            <!-- End content header -->
+
+                            <!-- content body -->
+                            <div class="body">
+                                {% block content_body %}
+                                {% endblock content_body %}
+                            </div>
+                            <!-- end content body -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Content -->
+            {% endblock base_content %}
+        </div>
+    </section>
+    <!-- End Section -->
+{% endblock body %}
