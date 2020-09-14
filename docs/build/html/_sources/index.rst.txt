@@ -20,6 +20,7 @@ This document describes how to launch the VTC-VLP application step by step on a 
 
    intro
    usage
+   launch
    vtcvlp
 
 Indices and tables

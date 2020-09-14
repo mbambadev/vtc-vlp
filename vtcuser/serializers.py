@@ -25,6 +25,7 @@ class VideoLinkSerializer(serializers.ModelSerializer):
         * Default `.create()` and `.update()` implementations are provided.
     """
     uri = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = VideoLink
         fields = [

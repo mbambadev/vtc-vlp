@@ -25,7 +25,12 @@
                     <h1>VTC <span>video link poster</span></h1>
                     <h3>You must login sorry ...</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+                    <ul class="list-unstyled l-menu">
+                        {% block l_footer %}
+                            <li><a href="#">Need help read the doc</a></li>
+                            <li><a href="{% url "vtcuser:api-login" %}">API</a></li>
+                        {% endblock l_footer %}
+                    </ul>
                 </div>
 			</div>
 			<div class="col-lg-4 col-md-12 col-sm-12">
