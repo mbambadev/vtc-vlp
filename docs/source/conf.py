@@ -20,8 +20,7 @@
 import os
 import sys
 import django
-cwd = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.abspath(os.path.join(cwd, '../../')))
+sys.path.insert(0, os.path.abspath('.'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'vtcvlp.settings'
 django.setup()
 
@@ -82,11 +81,11 @@ copyright = '2020, MBAMBA FABRICE DAMIEN'
 author = 'MBAMBA FABRICE DAMIEN'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0'
-master_doc = 'index'
+release = "1.0"
+master_doc = "index"
 autosummary_generate = True
 
-source_suffix = [".rst", ".md"]
+source_suffix = [".rst"]
 pygments_style = "sphinx"
 
 # -- General configuration ---------------------------------------------------
