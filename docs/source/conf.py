@@ -19,9 +19,9 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
-from django.conf import settings
 import django
+sys.path.insert(0, os.path.abspath('../..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'vtcvlp.settings'
 django.setup()
 
 from sphinx.ext.autosummary import Autosummary
@@ -82,7 +82,11 @@ author = 'MBAMBA FABRICE DAMIEN'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
+master_doc = 'index'
+autosummary_generate = True
 
+source_suffix = [".rst", ".md"]
+pygments_style = "sphinx"
 
 # -- General configuration ---------------------------------------------------
 
@@ -95,7 +99,10 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
               'sphinx.ext.inheritance_diagram',
               'sphinx.ext.autosummary',
               'recommonmark',
-              'sphinx.ext.coverage',
+              'sphinx.ext.coverage'
+              'sphinx.ext.ifconfig',
+              'sphinx_autodoc_typehints',
+
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -118,5 +125,3 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-master_doc = 'index'
