@@ -21,7 +21,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 from django.conf import settings
-settings.configure()
+import django
+django.setup()
 
 from sphinx.ext.autosummary import Autosummary
 from sphinx.ext.autosummary import get_documenter
