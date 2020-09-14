@@ -1,0 +1,19 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Report of task project}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Get Started}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Python Installation}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}PostgresSql Installation}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Create User and Database}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Run vtcvlp app}{9}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Launching the app}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}First time or not}{11}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The \sphinxstyleliteralintitle {\sphinxupquote {CustomUser}} class}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The \sphinxstyleliteralintitle {\sphinxupquote {VideoLink}} class}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}The \sphinxstyleliteralintitle {\sphinxupquote {CustomUserViewSet}} class}{19}{section.4.3}%
+\contentsline {section}{\numberline {4.4}The \sphinxstyleliteralintitle {\sphinxupquote {VideoLinkViewSet}} class}{20}{section.4.4}%
+\contentsline {section}{\numberline {4.5}The \sphinxstyleliteralintitle {\sphinxupquote {CustomUserSerializer}} class}{20}{section.4.5}%
+\contentsline {section}{\numberline {4.6}The \sphinxstyleliteralintitle {\sphinxupquote {VideoLinkSerializer}} class}{21}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Views modules:}{21}{section.4.7}%
+\contentsline {chapter}{Python Module Index}{23}{section*.62}%
+\contentsline {chapter}{Index}{25}{section*.63}%

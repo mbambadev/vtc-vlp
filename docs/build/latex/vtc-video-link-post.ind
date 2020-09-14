@@ -1,0 +1,137 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{authentication\_classes}\spxextra{vtcuser.views.VideoLinkAPIView attribute}, 
+		\hyperpage{21}
+  \item \spxentry{authentication\_classes}\spxextra{vtcuser.views.VideoLinkPostRudView attribute}, 
+		\hyperpage{22}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{create\_user\_profile()}\spxextra{vtcuser.models.CustomUser method}, 
+		\hyperpage{17}
+  \item \spxentry{CustomUser}\spxextra{class in vtcuser.models}, \hyperpage{17}
+  \item \spxentry{CustomUser.DoesNotExist}, \hyperpage{17}
+  \item \spxentry{CustomUser.MultipleObjectsReturned}, \hyperpage{17}
+  \item \spxentry{CustomUserSerializer}\spxextra{class in vtcuser.serializers}, \hyperpage{20}
+  \item \spxentry{CustomUserSerializer.Meta}\spxextra{class in vtcuser.serializers}, \hyperpage{20}
+  \item \spxentry{CustomUserViewSet}\spxextra{class in vtcuser.api}, \hyperpage{19}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{date\_add}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{18}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{fields}\spxextra{vtcuser.serializers.CustomUserSerializer.Meta attribute}, 
+		\hyperpage{20}
+  \item \spxentry{fields}\spxextra{vtcuser.serializers.VideoLinkSerializer.Meta attribute}, 
+		\hyperpage{21}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{get()}\spxextra{vtcuser.views.VideoLinkApiView method}, \hyperpage{22}
+  \item \spxentry{get\_api\_url()}\spxextra{vtcuser.models.VideoLink method}, \hyperpage{18}
+  \item \spxentry{get\_next\_by\_date\_add()}\spxextra{vtcuser.models.VideoLink method}, 
+		\hyperpage{18}
+  \item \spxentry{get\_previous\_by\_date\_add()}\spxextra{vtcuser.models.VideoLink method}, 
+		\hyperpage{18}
+  \item \spxentry{get\_queryset()}\spxextra{vtcuser.views.VideoLinkAPIView method}, \hyperpage{21}
+  \item \spxentry{get\_queryset()}\spxextra{vtcuser.views.VideoLinkPostRudView method}, 
+		\hyperpage{22}
+  \item \spxentry{get\_uri()}\spxextra{vtcuser.serializers.VideoLinkSerializer method}, 
+		\hyperpage{21}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{id}\spxextra{vtcuser.models.CustomUser attribute}, \hyperpage{17}
+  \item \spxentry{id}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{18}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{link}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{18}
+  \item \spxentry{lookup\_field}\spxextra{vtcuser.views.VideoLinkAPIView attribute}, \hyperpage{21}
+  \item \spxentry{lookup\_field}\spxextra{vtcuser.views.VideoLinkPostRudView attribute}, 
+		\hyperpage{22}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{model}\spxextra{vtcuser.serializers.CustomUserSerializer.Meta attribute}, 
+		\hyperpage{20}
+  \item \spxentry{model}\spxextra{vtcuser.serializers.VideoLinkSerializer.Meta attribute}, 
+		\hyperpage{21}
+  \item \spxentry{module}
+    \subitem \spxentry{vtcuser.views}, \hyperpage{21}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{name}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{19}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{objects}\spxextra{vtcuser.models.CustomUser attribute}, \hyperpage{17}
+  \item \spxentry{objects}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{19}
+  \item \spxentry{owner()}\spxextra{vtcuser.models.VideoLink property}, \hyperpage{19}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{perform\_create()}\spxextra{vtcuser.views.VideoLinkAPIView method}, 
+		\hyperpage{22}
+  \item \spxentry{permission\_classes}\spxextra{vtcuser.views.VideoLinkPostRudView attribute}, 
+		\hyperpage{22}
+  \item \spxentry{post()}\spxextra{vtcuser.views.VideoLinkAPIView method}, \hyperpage{22}
+  \item \spxentry{post()}\spxextra{vtcuser.views.VideoLinkApiView method}, \hyperpage{22}
+  \item \spxentry{poster}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{19}
+  \item \spxentry{poster\_id}\spxextra{vtcuser.models.VideoLink attribute}, \hyperpage{19}
+
+  \indexspace
+  \bigletter Q
+  \item \spxentry{queryset}\spxextra{vtcuser.api.CustomUserViewSet attribute}, \hyperpage{19}
+  \item \spxentry{queryset}\spxextra{vtcuser.api.VideoLinkViewSet attribute}, \hyperpage{20}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{read\_only\_fields}\spxextra{vtcuser.serializers.VideoLinkSerializer.Meta attribute}, 
+		\hyperpage{21}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{saved\_videos()}\spxextra{in module vtcuser.views}, \hyperpage{22}
+  \item \spxentry{serializer\_class}\spxextra{vtcuser.api.CustomUserViewSet attribute}, 
+		\hyperpage{19}
+  \item \spxentry{serializer\_class}\spxextra{vtcuser.api.VideoLinkViewSet attribute}, 
+		\hyperpage{20}
+  \item \spxentry{serializer\_class}\spxextra{vtcuser.views.VideoLinkAPIView attribute}, 
+		\hyperpage{22}
+  \item \spxentry{serializer\_class}\spxextra{vtcuser.views.VideoLinkPostRudView attribute}, 
+		\hyperpage{22}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{user}\spxextra{vtcuser.models.CustomUser attribute}, \hyperpage{17}
+  \item \spxentry{user\_id}\spxextra{vtcuser.models.CustomUser attribute}, \hyperpage{17}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{validate\_name()}\spxextra{vtcuser.serializers.VideoLinkSerializer method}, 
+		\hyperpage{21}
+  \item \spxentry{video\_crud()}\spxextra{in module vtcuser.views}, \hyperpage{22}
+  \item \spxentry{video\_delete()}\spxextra{in module vtcuser.views}, \hyperpage{22}
+  \item \spxentry{VideoLink}\spxextra{class in vtcuser.models}, \hyperpage{18}
+  \item \spxentry{VideoLink.DoesNotExist}, \hyperpage{18}
+  \item \spxentry{VideoLink.MultipleObjectsReturned}, \hyperpage{18}
+  \item \spxentry{videolink\_set}\spxextra{vtcuser.models.CustomUser attribute}, \hyperpage{18}
+  \item \spxentry{VideoLinkAPIView}\spxextra{class in vtcuser.views}, \hyperpage{21}
+  \item \spxentry{VideoLinkApiView}\spxextra{class in vtcuser.views}, \hyperpage{22}
+  \item \spxentry{VideoLinkPostRudView}\spxextra{class in vtcuser.views}, \hyperpage{22}
+  \item \spxentry{VideoLinkSerializer}\spxextra{class in vtcuser.serializers}, \hyperpage{21}
+  \item \spxentry{VideoLinkSerializer.Meta}\spxextra{class in vtcuser.serializers}, \hyperpage{21}
+  \item \spxentry{VideoLinkViewSet}\spxextra{class in vtcuser.api}, \hyperpage{20}
+  \item \spxentry{vtcuser.views}
+    \subitem \spxentry{module}, \hyperpage{21}
+
+\end{sphinxtheindex}
