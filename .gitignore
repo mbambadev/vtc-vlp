@@ -8,6 +8,6 @@ vtcuser/__pycache__/
 vtcuser/migrations/__pycache__/
 vtcuser/templatetags/__pycache__/
 vtcvlp/__pycache__/
-vtcvlp/__pycache__
-__pycache__
-
+__pycache__/
+docs/source/_static/
+docs/source/_templates/
