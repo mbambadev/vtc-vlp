@@ -19,7 +19,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../home/vtcvlp/'))
 from django.conf import settings
 import django
 django.setup()
@@ -95,6 +95,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
               'sphinx.ext.inheritance_diagram',
               'sphinx.ext.autosummary',
               'recommonmark',
+              'sphinx.ext.coverage',
               ]
 
 # Add any paths that contain templates here, relative to this directory.
