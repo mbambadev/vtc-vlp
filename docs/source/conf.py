@@ -83,7 +83,7 @@ author = 'MBAMBA FABRICE DAMIEN'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
-master_doc = os.path.abspath(os.path.join(cwd, "index"))
+master_doc = 'index'
 autosummary_generate = True
 
 source_suffix = [".rst", ".md"]
@@ -100,7 +100,8 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
               'sphinx.ext.inheritance_diagram',
               'sphinx.ext.autosummary',
               'recommonmark',
-              'sphinx.ext.coverage'
+              'sphinx.ext.coverage',
+              'sphinx.ext.autoclass',
               'sphinx.ext.ifconfig',
               'sphinx_autodoc_typehints',
 

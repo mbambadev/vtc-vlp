@@ -51,6 +51,7 @@ STATIC_ROOT = str(os.path.join(DATA_DIR, 'static'))
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'vtcvlp', 'assets'),
+    os.path.join(BASE_DIR, 'vtcvlp', '../docs'),
 )
 SITE_ID = config('SITE_ID', cast=int)
 

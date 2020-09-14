@@ -22,9 +22,3 @@ This document describes how to launch the VTC-VLP application step by step on a 
    usage
    launch
    vtcvlp
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
