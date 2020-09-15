@@ -9,16 +9,6 @@ The ``CustomUser`` class
     :undoc-members:
     :show-inheritance:
 
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.models.CustomUser
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.models.CustomUser
-        :attributes:
-
 The ``VideoLink`` class
 *****************************
 .. autoclass:: vtcuser.models.VideoLink
@@ -26,31 +16,11 @@ The ``VideoLink`` class
     :undoc-members:
     :show-inheritance:
 
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.models.VideoLink
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.models.VideoLink
-        :attributes:
-
 The ``CustomUserViewSet`` class
 *******************************
 .. autoclass:: vtcuser.api.CustomUserViewSet
     :members:
     :undoc-members:
-
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.api.CustomUserViewSet
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.api.CustomUserViewSet
-        :attributes:
 
 The ``VideoLinkViewSet`` class
 *******************************
@@ -59,16 +29,6 @@ The ``VideoLinkViewSet`` class
     :undoc-members:
     :show-inheritance:
 
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.api.VideoLinkViewSet
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.api.VideoLinkViewSet
-        :attributes:
-
 The ``CustomUserSerializer`` class
 **********************************
 .. autoclass:: vtcuser.serializers.CustomUserSerializer
@@ -76,32 +36,12 @@ The ``CustomUserSerializer`` class
     :undoc-members:
     :show-inheritance:
 
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.serializers.CustomUserSerializer
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.serializers.CustomUserSerializer
-        :attributes:
-
 The ``VideoLinkSerializer`` class
 *********************************
 .. autoclass:: vtcuser.serializers.VideoLinkSerializer
     :members:
     :undoc-members:
     :show-inheritance:
-
-    .. rubric:: Methods
-
-    .. autoautosummary:: vtcuser.serializers.VideoLinkSerializer
-        :methods:
-
-    .. rubric:: Attributes
-
-    .. autoautosummary:: vtcuser.serializers.VideoLinkSerializer
-        :attributes:
 
 Views modules:
 **************
