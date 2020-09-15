@@ -51,3 +51,4 @@ urllib3==1.25.10
 whitenoise==5.2.0
 rst2pdf==0.98
 pymemcache==3.3.0
+python-memcached==1.59
